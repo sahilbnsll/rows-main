@@ -1,0 +1,1173 @@
+@import "tailwindcss";
+@import "./archive-folder.css";
+@import "./library.css";
+
+/* ------------------------------------------------------------------ */
+/* Design system: "Paper and Stage"                                    */
+/*                                                                     */
+/* Inherited from the IAAF 2026 festival page the society liked: handmade
+/* cream paper, the poster's olive-black ink, sage and rose watercolour, */
+/* maroon kept for the one thing to do, gold only as hairlines.        */
+/* Extended for the whole society with a second surface, the Stage:    */
+/* the dark olive-black of an auditorium, where the productions and    */
+/* festival photographs (all shot under stage lights) glow.            */
+/*                                                                     */
+/* Motion tokens follow the Portfolio project; the "photographs        */
+/* develop from black and white" reveal and the chapter rail follow    */
+/* My Postcards. Full notes: docs/design-system.md                     */
+/* ------------------------------------------------------------------ */
+
+:root {
+  /* paper surfaces */
+  --cream: #f6efe0;
+  --paper: #fbf7ee;
+  --sage: #e2e7d1;
+  --sage-deep: #c5cfa9;
+  --rose: #e8c6bf;
+  /* ink */
+  --ink: #26301a;
+  --ink-muted: #565d4a; /* 6.1:1 on cream */
+  --olive: #566b30;
+  /* accents */
+  --maroon: #8a1c24;
+  --maroon-deep: #681319;
+  --gold: #b48d3c;
+  /* the stage */
+  --stage: #161c0f;
+  --stage-raised: #1f2716;
+  --stage-line: rgb(251 247 238 / 0.14);
+  --on-stage: #fbf7ee;
+  --on-stage-muted: rgb(251 247 238 / 0.72);
+  /* surfaces that turn dark at night (cards, sheets); --paper itself stays light, it is the ink of the Stage */
+  --surface: #fbf7ee;
+  --on-ink: #fbf7ee;
+  --maroon-fill: #8a1c24;
+  --maroon-fill-hover: #681319;
+  /* the maroon band and print: the same by day and by night */
+  --maroon-band: #681319;
+
+  --wash-sage: rgb(176 194 140 / 0.34);
+  --wash-rose: rgb(232 198 191 / 0.4);
+  --wash-gold: rgb(222 196 128 / 0.24);
+
+  --line: rgb(38 48 26 / 0.12);
+  --line-strong: rgb(38 48 26 / 0.22);
+
+  --shadow-e1: 0 1px 2px rgb(38 48 26 / 0.06), 0 2px 8px -2px rgb(38 48 26 / 0.08);
+  --shadow-e2: 0 2px 4px rgb(38 48 26 / 0.06), 0 16px 32px -16px rgb(38 48 26 / 0.3);
+  --shadow-e3: 0 4px 8px rgb(38 48 26 / 0.06), 0 30px 60px -28px rgb(38 48 26 / 0.45);
+
+  /* motion: D1 micro, D2 standard, D3 structural */
+  --d1: 120ms;
+  --d2: 200ms;
+  --d3: 320ms;
+  --d4: 700ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-move: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --header-h: 4.25rem;
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+  --wrap: 76rem;
+  --wrap-narrow: 48rem;
+
+  /* paper grain, so the page reads as the same stock as the printed pass */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .15 0 0 0 0 .18 0 0 0 0 .1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-rose: var(--rose);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-olive: var(--olive);
+  --color-maroon: var(--maroon);
+  --color-maroon-deep: var(--maroon-deep);
+  --color-maroon-band: var(--maroon-band);
+  --color-surface: var(--surface);
+  --color-on-ink: var(--on-ink);
+  --color-gold: var(--gold);
+  --color-stage: var(--stage);
+  --color-stage-raised: var(--stage-raised);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --shadow-e1: var(--shadow-e1);
+  --shadow-e2: var(--shadow-e2);
+  --shadow-e3: var(--shadow-e3);
+
+  --font-display: var(--font-dm-serif), "Iowan Old Style", Georgia, serif;
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out: var(--ease-out);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1.25rem);
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100svh;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+  overflow-x: clip;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--grain);
+  opacity: 0.32;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--sage-deep);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.on-stage :focus-visible,
+.on-dark :focus-visible {
+  outline-color: var(--sage-deep);
+}
+
+@layer components {
+/* ---------- layout ---------- */
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.wrap-narrow {
+  width: 100%;
+  max-width: calc(var(--wrap-narrow) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(4.5rem, 3rem + 5vw, 8rem);
+}
+
+.section-tight {
+  padding-block: clamp(3rem, 2rem + 3.5vw, 5.5rem);
+}
+
+@media (min-width: 1680px) {
+  :root {
+    --wrap: 86rem;
+  }
+  html {
+    font-size: 106.25%;
+  }
+}
+
+/* The Stage: a dark band. Photographs shot under stage lights sit best on it. */
+.stage {
+  background: var(--stage);
+  color: var(--on-stage);
+  position: relative;
+  isolation: isolate;
+}
+
+/* The Stage has its own moving backdrop, so a dark section is never a flat slab: a gold vine climbing the right edge and a
+   lotus mandala turning on the left, both fixed to the window and driven by the scroll position (SiteBackground writes
+   --bg-rot and --bg-vine). clip-path keeps them inside the section without breaking the sticky scenes, as overflow would. */
+.stage,
+.moving-backdrop {
+  clip-path: inset(0);
+}
+
+.stage {
+  background:
+    radial-gradient(48rem 34rem at 10% 62%, rgb(180 141 60 / 0.12), transparent 70%) fixed,
+    radial-gradient(40rem 30rem at 92% 12%, rgb(138 28 36 / 0.16), transparent 70%) fixed,
+    var(--stage);
+}
+
+.stage::before,
+.stage::after,
+.moving-backdrop::before,
+.moving-backdrop::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.stage::before,
+.moving-backdrop::before {
+  right: -150px;
+  top: 0;
+  width: 352px;
+  height: calc(100vh + 2347px);
+  background: url("/bg/vine.svg") 0 0 / 352px auto repeat-y;
+  opacity: 0.34;
+  transform: translateY(var(--bg-vine, 0px));
+}
+
+.stage::after,
+.moving-backdrop::after {
+  left: -21rem;
+  top: 50%;
+  width: 50rem;
+  height: 50rem;
+  margin-top: -25rem;
+  background: url("/bg/mandala-solo.svg") center / contain no-repeat;
+  opacity: 0.24;
+  transform: rotate(var(--bg-rot, 0deg));
+}
+
+@media (max-width: 1023px) {
+  .stage::before,
+  .moving-backdrop::before {
+    right: -230px;
+    opacity: 0.14;
+  }
+  .stage::after,
+  .moving-backdrop::after {
+    left: -30rem;
+    opacity: 0.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage::before,
+  .stage::after,
+  .moving-backdrop::before,
+  .moving-backdrop::after {
+    transform: none;
+  }
+}
+
+.stage .reading,
+.stage .muted {
+  color: var(--on-stage-muted);
+}
+
+/* ---------- type ---------- */
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1;
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+  font-size: clamp(2.9rem, 1.2rem + 6.4vw, 6.75rem);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  font-size: clamp(2.5rem, 1.5rem + 3.8vw, 5rem);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.04;
+  font-size: clamp(2.2rem, 1.5rem + 2.5vw, 3.6rem);
+}
+
+.sub-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.008em;
+  line-height: 1.12;
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2.1rem);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+/* Reading text: Newsreader at a comfortable measure (about 65 characters) */
+.reading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.075rem, 1rem + 0.25vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--ink-muted);
+  max-width: 40rem;
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.75rem);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.stage .lead {
+  color: var(--on-stage);
+}
+
+.meta {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.stage .meta {
+  color: var(--on-stage-muted);
+}
+
+.prose-flow > * + * {
+  margin-top: 1.1em;
+}
+
+.motto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: inherit;
+  gap: 0.15rem 1.1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.5rem);
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.motto > span + span::before {
+  content: "";
+  display: inline-block;
+  width: 0.36rem;
+  height: 0.36rem;
+  margin-right: 1rem;
+  background: var(--gold);
+  transform: rotate(45deg) translateY(-0.15rem);
+}
+
+/* ---------- controls ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.875rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    transform var(--d1) var(--ease),
+    background-color var(--d2) var(--ease),
+    color var(--d2) var(--ease),
+    box-shadow var(--d2) var(--ease);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.btn-primary {
+  background: var(--maroon-fill);
+  color: var(--paper);
+  box-shadow: 0 1px 2px rgb(104 19 25 / 0.3), 0 8px 18px -10px rgb(104 19 25 / 0.7);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--maroon-fill-hover);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.btn-secondary:hover {
+  box-shadow: inset 0 0 0 1px var(--ink-muted);
+}
+
+.on-stage .btn-secondary {
+  background: transparent;
+  color: var(--paper);
+  box-shadow: inset 0 0 0 1px rgb(251 247 238 / 0.4);
+}
+
+.on-stage .btn-secondary:hover {
+  box-shadow: inset 0 0 0 1px rgb(251 247 238 / 0.85);
+}
+
+.on-stage .btn-primary {
+  background: var(--paper);
+  color: var(--maroon-band);
+  box-shadow: none;
+}
+
+.on-stage .btn-primary:hover:not(:disabled) {
+  background: var(--sage);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color var(--d2) var(--ease);
+}
+
+.on-stage .link-arrow {
+  text-decoration-color: rgb(251 247 238 / 0.4);
+}
+
+.link-arrow:hover {
+  text-decoration-color: currentColor;
+}
+
+.link-arrow svg {
+  transition: transform var(--d2) var(--ease);
+}
+
+.link-arrow:hover svg {
+  transform: translateX(2px);
+}
+
+/* plain inline links in body copy */
+.prose-link {
+  color: var(--maroon-deep);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--maroon) 40%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+.prose-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.stage .prose-link {
+  color: var(--paper);
+  text-decoration-color: rgb(251 247 238 / 0.45);
+}
+
+/* Paper card: the one container style on paper. */
+.card {
+  background: var(--surface);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-e1), inset 0 0 0 1px var(--line);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  transition:
+    background-color var(--d2) var(--ease),
+    color var(--d2) var(--ease),
+    box-shadow var(--d2) var(--ease);
+}
+
+.chip:hover {
+  box-shadow: inset 0 0 0 1px var(--ink-muted);
+}
+
+.chip[aria-pressed="true"],
+.chip[aria-current="page"] {
+  background: var(--ink);
+  color: var(--on-ink);
+  box-shadow: none;
+}
+
+/* ---------- signature devices ---------- */
+
+/* Mehrab: people stand in a temple arch, edged by a hairline. */
+.arch {
+  border-radius: 50% 50% 0.75rem 0.75rem / 32% 32% 0.75rem 0.75rem;
+  overflow: hidden;
+  background: var(--sage-deep);
+  position: relative;
+  isolation: isolate;
+}
+
+.arch-frame {
+  border-radius: 50% 50% 1rem 1rem / 32% 32% 1rem 1rem;
+  outline: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  outline-offset: 6px;
+}
+
+/* Photographs "develop" from black and white into colour as they arrive (My Postcards). */
+.develop img {
+  transition: filter 1100ms var(--ease-out);
+}
+
+.develop[data-in="false"] img {
+  filter: grayscale(1) contrast(1.05) brightness(1.04);
+}
+
+/* Image hover: a slow, small zoom, only where a real pointer exists. */
+@media (hover: hover) {
+  .zoom-on-hover img {
+    transition: transform 900ms var(--ease-out);
+  }
+  .zoom-on-hover:hover img,
+  .zoom-on-hover:focus-visible img {
+    transform: scale(1.045);
+  }
+}
+
+/* Perforation: the tear line of the pass, used where something is a ticket or a listing row. */
+.perforation {
+  height: 2px;
+  background-image: radial-gradient(circle, var(--line-strong) 1.1px, transparent 1.4px);
+  background-size: 9px 2px;
+}
+
+.hairline {
+  border-top: 1px solid var(--line);
+}
+
+.stage .hairline {
+  border-top-color: var(--stage-line);
+}
+
+/* ---------- reveal on scroll ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity var(--d3) var(--ease-out),
+    transform 560ms var(--ease-out);
+}
+
+.reveal[data-in="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Words that rise out of a hidden line (PullUpWords). */
+.pull-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.12em;
+}
+
+.pull-word > span {
+  display: inline-block;
+  transform: translateY(105%);
+  transition: transform 900ms var(--ease-out);
+}
+
+[data-in="true"] .pull-word > span {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pull-word > span {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Image mask reveal: the picture is uncovered from the bottom edge up. */
+.mask-reveal {
+  clip-path: inset(0 0 100% 0 round 0);
+  transition: clip-path 1100ms var(--ease-out);
+}
+
+.mask-reveal[data-in="true"] {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ---------- header ---------- */
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0.2rem;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  transition: color var(--d2) var(--ease);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.15rem;
+  height: 1px;
+  background: var(--maroon);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--d3) var(--ease-out);
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--ink);
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* ---------- dialogs: menu and photograph viewer ---------- */
+
+dialog.sheet {
+  transition:
+    opacity var(--d3) var(--ease-out),
+    transform var(--d3) var(--ease-out),
+    overlay var(--d3) allow-discrete,
+    display var(--d3) allow-discrete;
+  opacity: 0;
+  transform: translateX(1.5rem);
+}
+
+dialog.sheet[open] {
+  opacity: 1;
+  transform: none;
+}
+
+@starting-style {
+  dialog.sheet[open] {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+}
+
+dialog::backdrop {
+  background: rgb(38 48 26 / 0.62);
+  backdrop-filter: blur(3px);
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog.viewer {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100svh;
+  max-height: none;
+  border: 0;
+  background: rgb(18 24 11 / 0.96);
+  color: var(--paper);
+  opacity: 0;
+  transition:
+    opacity var(--d3) var(--ease-out),
+    overlay var(--d3) allow-discrete,
+    display var(--d3) allow-discrete;
+}
+
+dialog.viewer[open] {
+  opacity: 1;
+}
+
+dialog.viewer[data-closing] {
+  opacity: 0;
+}
+
+@starting-style {
+  dialog.viewer[open] {
+    opacity: 0;
+  }
+}
+
+dialog.viewer::backdrop {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.viewer-slide {
+  animation: viewer-slide 380ms var(--ease-out) both;
+}
+
+@keyframes viewer-slide {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--dir, 1) * 2.25rem));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- marquee (press strip) ---------- */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 140s linear infinite;
+}
+
+.marquee[data-paused="true"] .marquee-track,
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- hero ---------- */
+
+.hero-rise {
+  /* Slides up without fading: text and pictures are visible from the first paint, which keeps the largest-content timing honest. */
+  animation: rise 800ms var(--ease-out) both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(1.25rem);
+  }
+}
+
+.arch-rise {
+  /* Slides up only: the pictures paint at once (no fade), so the largest image counts as loaded as soon as it arrives. */
+  animation: arch-rise 1100ms var(--ease-out) both;
+}
+
+@keyframes arch-rise {
+  from {
+    transform: translateY(4.5rem);
+  }
+}
+
+.emblem-turn {
+  animation: emblem-turn 240s linear infinite;
+}
+
+.emblem-breathe {
+  opacity: 0;
+  animation:
+    emblem-in 1800ms 450ms ease-out forwards,
+    emblem-breathe 14s ease-in-out 2.4s infinite;
+}
+
+@keyframes emblem-in {
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes emblem-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes emblem-breathe {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.145;
+    transform: scale(1.035);
+  }
+}
+
+/* ---------- skip link, screen reader text ---------- */
+
+.skip-link {
+  position: fixed;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 999px;
+  background: var(--maroon);
+  color: var(--paper);
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .mask-reveal {
+    clip-path: none;
+  }
+  .develop[data-in="false"] img {
+    filter: none;
+  }
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .emblem-breathe {
+    opacity: 0.1;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-dup {
+    display: none;
+  }
+}
+
+}
+
+/* ---------- page background: washes, mandalas, vine and petals that move with the scroll ---------- */
+/* The layers are fixed to the window and driven by SiteBackground.tsx (transform only). Dark "Stage" sections cover them. */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-bg::after {
+  /* fine laid-paper lines, so the stock has a tooth even where it is plain */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(180deg, transparent 0 5px, rgb(86 107 48 / 0.025) 5px 6px);
+}
+
+.wash {
+  position: absolute;
+  width: 78vw;
+  height: 78vh;
+  border-radius: 50%;
+  will-change: transform;
+}
+.wash-sage {
+  background: radial-gradient(closest-side, var(--wash-sage), transparent);
+}
+.wash-rose {
+  background: radial-gradient(closest-side, var(--wash-rose), transparent);
+}
+.wash-gold {
+  background: radial-gradient(closest-side, var(--wash-gold), transparent);
+}
+
+.mandala-fixed {
+  position: absolute;
+  width: 38rem;
+  height: 38rem;
+  background: url("/bg/mandala-solo.svg") center / contain no-repeat;
+  opacity: 0.5;
+  will-change: transform;
+}
+.mandala-fixed-sm {
+  width: 28rem;
+  height: 28rem;
+  opacity: 0.4;
+}
+
+.vine-fixed {
+  position: absolute;
+  right: -144px;
+  top: 0;
+  width: 352px;
+  height: calc(100vh + 2347px);
+  background: url("/bg/vine.svg") 0 0 / 352px auto repeat-y;
+  opacity: 0.55;
+  will-change: transform;
+}
+
+@media (max-width: 1023px) {
+  .mandala-fixed {
+    opacity: 0.3;
+    left: -24rem !important;
+  }
+  .mandala-fixed-sm {
+    right: -20rem !important;
+  }
+  .vine-fixed {
+    opacity: 0.32;
+    right: -240px;
+  }
+}
+
+@media print {
+  .site-bg {
+    display: none;
+  }
+}
+
+/* Bento gallery cells: the first picture is large on every screen; from tablet up each picture takes its computed span. */
+.bento-item[data-first] {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+@media (min-width: 768px) {
+  .bento-item {
+    grid-column: span var(--c, 1);
+    grid-row: span var(--r, 1);
+  }
+}
+
+/* ---------- the lamp: a warm night palette and a pool of lamplight ---------- */
+html[data-lamp="on"] {
+  color-scheme: dark;
+  --cream: #17140e;
+  --surface: #241e15;
+  --sage: #22261a;
+  --sage-deep: #3a4129;
+  --rose: #3a2621;
+  --ink: #f0e6cf;
+  --ink-muted: #c7bca3;
+  --olive: #b8c48c;
+  --maroon: #e48a7d;
+  --maroon-deep: #eea193;
+  --maroon-fill: #a2342c;
+  --maroon-fill-hover: #8a1c24;
+  --gold: #d6ad5a;
+  --on-ink: #17140e;
+  --stage: #0e1209;
+  --stage-raised: #191f11;
+  --line: rgb(240 230 207 / 0.13);
+  --line-strong: rgb(240 230 207 / 0.26);
+  --wash-sage: rgb(110 120 60 / 0.2);
+  --wash-rose: rgb(150 70 50 / 0.2);
+  --wash-gold: rgb(230 160 60 / 0.16);
+  --shadow-e1: 0 1px 2px rgb(0 0 0 / 0.3), 0 2px 8px -2px rgb(0 0 0 / 0.4);
+  --shadow-e2: 0 2px 4px rgb(0 0 0 / 0.3), 0 16px 32px -16px rgb(0 0 0 / 0.7);
+  --shadow-e3: 0 4px 8px rgb(0 0 0 / 0.3), 0 30px 60px -28px rgb(0 0 0 / 0.8);
+}
+
+body {
+  transition:
+    background-color 700ms var(--ease),
+    color 700ms var(--ease);
+}
+
+/* lamplight: a warm pool spreading from the lamp in the corner, over everything but under the content */
+.lamp-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 900ms var(--ease);
+  background:
+    radial-gradient(38rem 30rem at calc(100% - 5rem) calc(100% - 3rem), rgb(255 196 110 / 0.26), transparent 70%),
+    radial-gradient(80rem 60rem at 85% 100%, rgb(255 180 90 / 0.1), transparent 72%);
+}
+
+html[data-lamp="on"] .lamp-glow {
+  opacity: 1;
+}
+
+@layer components {
+/* the desk lamp in the corner (PullLamp) */
+.pull-lamp {
+  aspect-ratio: 480 / 560;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 14px rgb(38 48 26 / 0.18));
+}
+
+.pull-lamp-lit {
+  opacity: 0;
+  transition: opacity 600ms var(--ease);
+}
+
+.pull-lamp[data-on="true"] .pull-lamp-lit {
+  opacity: 1;
+}
+
+.pull-lamp-handle {
+  position: absolute;
+  left: calc(350 / 480 * 100%);
+  top: calc(332 / 560 * 100%);
+  width: 2.75rem;
+  height: 2.75rem;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  cursor: grab;
+  touch-action: none;
+  pointer-events: auto;
+}
+
+.pull-lamp-handle:active {
+  cursor: grabbing;
+}
+
+.pull-lamp-handle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+}
+
+/* ---------- testimonial cards scattered on a table (VoiceNotes) ---------- */
+@layer components {
+  .voice-card {
+    background:
+      var(--grain),
+      linear-gradient(170deg, color-mix(in srgb, var(--surface) 92%, var(--gold)) 0%, var(--surface) 55%, color-mix(in srgb, var(--surface) 90%, var(--rose)) 100%);
+    background-size: 240px 240px, auto;
+    border-radius: 0.35rem;
+    box-shadow:
+      0 1px 1px rgb(38 48 26 / 0.08),
+      0 18px 34px -18px rgb(38 48 26 / 0.45),
+      inset 0 0 0 1px var(--line);
+    transition:
+      transform 500ms var(--ease-out),
+      box-shadow 500ms var(--ease-out);
+  }
+
+  /* the mount: a gold hairline just inside the edge, like the festival's printed programme */
+  .voice-card::before {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+    border-radius: 0.2rem;
+    pointer-events: none;
+  }
+
+  .voice-pin {
+    position: absolute;
+    left: 50%;
+    top: -0.45rem;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-left: -0.525rem;
+    border-radius: 999px;
+    background: radial-gradient(circle at 35% 30%, #ffe4a5, #b48d3c 45%, #5a412b 100%);
+    box-shadow: 0 3px 4px rgb(0 0 0 / 0.3);
+  }
+
+  .voice-note:nth-child(odd) .voice-card {
+    transform: rotate(-0.6deg);
+  }
+
+  .voice-note:nth-child(even) .voice-card {
+    transform: rotate(0.6deg);
+  }
+
+  @media (min-width: 1024px) {
+    .voice-note .voice-card,
+    .voice-note:nth-child(odd) .voice-card,
+    .voice-note:nth-child(even) .voice-card {
+      transform: rotate(var(--r));
+    }
+
+    .voice-note:hover {
+      z-index: 5;
+    }
+
+    .voice-note:hover .voice-card {
+      transform: rotate(0deg) translateY(-0.4rem) scale(1.03);
+      box-shadow:
+        0 2px 2px rgb(38 48 26 / 0.08),
+        0 30px 50px -22px rgb(38 48 26 / 0.55),
+        inset 0 0 0 1px var(--line);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .voice-card {
+      transition: none;
+    }
+  }
+}
+
+/* the caption of the polaroid line rises in (PolaroidLine) */
+@keyframes pl-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
