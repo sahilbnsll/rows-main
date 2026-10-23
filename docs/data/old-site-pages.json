@@ -1,0 +1,717 @@
+{
+  "seen": [
+    [
+      "index.htm",
+      200
+    ],
+    [
+      "about-rays-of-wisdom-society.html",
+      200
+    ],
+    [
+      "members.html",
+      200
+    ],
+    [
+      "partners.html",
+      200
+    ],
+    [
+      "productions.html",
+      200
+    ],
+    [
+      "prdn-vedas-eko-hum-bahu-syam.html",
+      200
+    ],
+    [
+      "prdn-antar-yatra.html",
+      200
+    ],
+    [
+      "prdn-sanskrit-healing-language.html",
+      200
+    ],
+    [
+      "prdn-ramleela-in-opera.html",
+      200
+    ],
+    [
+      "prdn-rabindra-abhivyakti.html",
+      200
+    ],
+    [
+      "iaaf.html",
+      200
+    ],
+    [
+      "iaac-2024.html",
+      200
+    ],
+    [
+      "iaae-2024.html",
+      200
+    ],
+    [
+      "iaaf-2024.html",
+      200
+    ],
+    [
+      "rws-7th-iaaf.html",
+      200
+    ],
+    [
+      "iaaf-2018.html",
+      200
+    ],
+    [
+      "iaaf-2014.html",
+      200
+    ],
+    [
+      "iaaf-2013.html",
+      200
+    ],
+    [
+      "iaaf-2012.html",
+      200
+    ],
+    [
+      "iaaf-2011.html",
+      200
+    ],
+    [
+      "iaaf-2010.html",
+      200
+    ],
+    [
+      "cultural-event-management.html",
+      200
+    ],
+    [
+      "yoga.html",
+      200
+    ],
+    [
+      "rws-videos.html",
+      200
+    ],
+    [
+      "print-media.html",
+      200
+    ],
+    [
+      "donate.html",
+      200
+    ],
+    [
+      "contact.html",
+      200
+    ],
+    [
+      "iaae-2024-02-sangeeta.html",
+      200
+    ],
+    [
+      "iaae-2024-03-aashima.html",
+      200
+    ],
+    [
+      "iaae-2024-04-nidhi.html",
+      200
+    ],
+    [
+      "iaae-2024-05-abhay.html",
+      200
+    ],
+    [
+      "iaae-2024-06-zuzana.html",
+      200
+    ],
+    [
+      "iaae-2024-07-ragini.html",
+      200
+    ],
+    [
+      "iaae-2024-08-indu.html",
+      200
+    ],
+    [
+      "iaae-2024-09-laxman.html",
+      200
+    ],
+    [
+      "iaae-2024-10-amit.html",
+      200
+    ],
+    [
+      "iaae-2024-11-nivedita.html",
+      200
+    ],
+    [
+      "iaae-2024-01-nitin.html",
+      200
+    ],
+    [
+      "iaae-2024-12-anand.html",
+      200
+    ],
+    [
+      "iaae-2024-13-tarun.html",
+      200
+    ],
+    [
+      "cul-export-award-function.html",
+      200
+    ],
+    [
+      "cul-feel-india.html",
+      200
+    ],
+    [
+      "cul-brics-international-conference.html",
+      200
+    ],
+    [
+      "cul-ministry-textiles-international-conference.html",
+      200
+    ],
+    [
+      "cul-conference-south-asian-ministers.html",
+      200
+    ],
+    [
+      "cul-cvc-conference.html",
+      200
+    ],
+    [
+      "cul-capam-conference.html",
+      200
+    ],
+    [
+      "print-media-2011.html",
+      200
+    ],
+    [
+      "print-media-2012.html",
+      200
+    ],
+    [
+      "print-media-2013.html",
+      200
+    ],
+    [
+      "print-media-2014.html",
+      200
+    ],
+    [
+      "print-media-2018.html",
+      200
+    ]
+  ],
+  "pages": {
+    "index.htm": {
+      "title": "Rays of Wisdom Society",
+      "desc": "Rays of Wisdom Society is a Delhi based registered non-profit organization, committed to establish and propagate the wisdom behind ancient rituals and practices."
+    },
+    "about-rays-of-wisdom-society.html": {
+      "title": "About Rays of Wisdom Society",
+      "desc": "Rays of Wisdom Society is a Delhi based registered non-profit organization, committed to establish and propagate the wisdom behind ancient rituals and practices. Rays of Wisdom Society (Regd. no. 54348/ 80 g) has beenrecognized officially by the Ministry of Culture, Govt. of India as an Outstanding Category organization."
+    },
+    "members.html": {
+      "title": "Team Members - Rays of Wisdom Society",
+      "desc": "Rays of Wisdom Society Members, Illustrious Patron, Founder Secretary, Executive Members"
+    },
+    "partners.html": {
+      "title": "Our Partners - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "productions.html": {
+      "title": "Rays of Wisdom Productions",
+      "desc": "Reela Hota’s spiritual leanings and long association with her ashram of her spiritual guru Paramahamsa Satyananda Saraswati, prompted her to deviate from the usual dance presentations of mythological themes and present spiritual philosophy instead. This pioneering work was highly appreciated by critics and audiences alike."
+    },
+    "prdn-vedas-eko-hum-bahu-syam.html": {
+      "title": "Vedas - Eko Hum Bahu Syam | Rays of Wisdom Society",
+      "desc": ""
+    },
+    "prdn-antar-yatra.html": {
+      "title": "Antar Yatra - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "prdn-sanskrit-healing-language.html": {
+      "title": "Sanskrit: The Mantra Bhasha - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "prdn-ramleela-in-opera.html": {
+      "title": "Ramleela in Opera -  Rays of Wisdom Society",
+      "desc": ""
+    },
+    "prdn-rabindra-abhivyakti.html": {
+      "title": "Rabindra Abhivyakti  - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "iaaf.html": {
+      "title": "IAAF - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaac-2024.html": {
+      "title": "IAA Conference  2024 - Healing Through Arts Across Culture",
+      "desc": ""
+    },
+    "iaae-2024.html": {
+      "title": "International Ancient Arts Exhibition 2024 - Metaphysical, Symbolic and Healing Nature",
+      "desc": ""
+    },
+    "iaaf-2024.html": {
+      "title": "8th International Ancient Arts Festival 2014 - Delhi, India",
+      "desc": ""
+    },
+    "rws-7th-iaaf.html": {
+      "title": "7th International Ancient Arts Festival - Delhi, India",
+      "desc": ""
+    },
+    "iaaf-2018.html": {
+      "title": "IAAF 2018 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaaf-2014.html": {
+      "title": "IAAF 2014 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaaf-2013.html": {
+      "title": "IAAF 2013 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaaf-2012.html": {
+      "title": "IAAF 2012 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaaf-2011.html": {
+      "title": "IAAF 2011 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "iaaf-2010.html": {
+      "title": "IAAF 2010 - Rays of Wisdom Society",
+      "desc": " IAAF - The International Ancient Arts Festival is also a symposium. It is an annual event organized by the Rays of Wisdom Society."
+    },
+    "cultural-event-management.html": {
+      "title": "Cultural Event Management - Rays of Wisdom Society",
+      "desc": "Rays of Wisdom Society has been specially commissioned to produce events for International Conferences by the different ministries of the central Government of India. Our USP is while we showcase the varied classical and folk forms of India, the central theme of spirituality, the core of Indian traditional lifestyle, runs throughout the presentations."
+    },
+    "yoga.html": {
+      "title": "Yoga - Rays of Wisdom Society",
+      "desc": "Rays of Wisdom Society Healing through YOGA"
+    },
+    "rws-videos.html": {
+      "title": "Online Videos - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media.html": {
+      "title": "Print Media - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "donate.html": {
+      "title": "Support the Arts & the Community with Rays of Wisdom Society",
+      "desc": ""
+    },
+    "contact.html": {
+      "title": "Contact Us - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "iaae-2024-02-sangeeta.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Sangeeta Gupta",
+      "desc": ""
+    },
+    "iaae-2024-03-aashima.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Aashima Mehrotra",
+      "desc": ""
+    },
+    "iaae-2024-04-nidhi.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Nidhi Chaudhuri",
+      "desc": ""
+    },
+    "iaae-2024-05-abhay.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Abhay Kumar",
+      "desc": ""
+    },
+    "iaae-2024-06-zuzana.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Zuzana Mezencevová",
+      "desc": ""
+    },
+    "iaae-2024-07-ragini.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Ragini Upadhyay",
+      "desc": ""
+    },
+    "iaae-2024-08-indu.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Indu Tripathy",
+      "desc": ""
+    },
+    "iaae-2024-09-laxman.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Dr. Lakshman Prasad",
+      "desc": ""
+    },
+    "iaae-2024-10-amit.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Amit Kalla",
+      "desc": ""
+    },
+    "iaae-2024-11-nivedita.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Dr. Nivedita Bandil",
+      "desc": ""
+    },
+    "iaae-2024-01-nitin.html": {
+      "title": "IAAF 2024 - Healing Through Arts Across Culture",
+      "desc": ""
+    },
+    "iaae-2024-12-anand.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Anand Bekwad",
+      "desc": ""
+    },
+    "iaae-2024-13-tarun.html": {
+      "title": "IAA Exhibition 2024 - Participating Artist - Tarun Sharma",
+      "desc": ""
+    },
+    "cul-export-award-function.html": {
+      "title": "Export Award Function March 2014 - International Conference - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-feel-india.html": {
+      "title": "Feel India, Ministry of Tourism - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-brics-international-conference.html": {
+      "title": "BRICS International Conference - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-ministry-textiles-international-conference.html": {
+      "title": "Ministry of Textiles - International Conference - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-conference-south-asian-ministers.html": {
+      "title": "Conference of South Asian Ministers  - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-cvc-conference.html": {
+      "title": "CVC Conference, April 2013 - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "cul-capam-conference.html": {
+      "title": "CAPAM Conference - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media-2011.html": {
+      "title": "Print Media 2011 -  Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media-2012.html": {
+      "title": "Print Media 2012 - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media-2013.html": {
+      "title": "Print Media 2013 - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media-2014.html": {
+      "title": "Print Media 2014 - Rays of Wisdom Society",
+      "desc": ""
+    },
+    "print-media-2018.html": {
+      "title": "Print Media 2018 - Rays of Wisdom Society",
+      "desc": ""
+    }
+  },
+  "broken": [],
+  "external": [
+    [
+      "https://web.facebook.com/Rays-of-Wisdom-Society-261794860907430",
+      [
+        "index.htm",
+        "about-rays-of-wisdom-society.html",
+        "members.html",
+        "partners.html",
+        "productions.html",
+        "prdn-vedas-eko-hum-bahu-syam.html",
+        "prdn-antar-yatra.html",
+        "prdn-sanskrit-healing-language.html",
+        "prdn-ramleela-in-opera.html",
+        "prdn-rabindra-abhivyakti.html",
+        "iaaf.html",
+        "iaac-2024.html",
+        "iaae-2024.html",
+        "iaaf-2024.html",
+        "rws-7th-iaaf.html",
+        "iaaf-2018.html",
+        "iaaf-2014.html",
+        "iaaf-2013.html",
+        "iaaf-2012.html",
+        "iaaf-2011.html",
+        "iaaf-2010.html",
+        "cultural-event-management.html",
+        "yoga.html",
+        "rws-videos.html",
+        "print-media.html",
+        "donate.html",
+        "contact.html",
+        "iaae-2024-02-sangeeta.html",
+        "iaae-2024-03-aashima.html",
+        "iaae-2024-04-nidhi.html",
+        "iaae-2024-05-abhay.html",
+        "iaae-2024-06-zuzana.html",
+        "iaae-2024-07-ragini.html",
+        "iaae-2024-08-indu.html",
+        "iaae-2024-09-laxman.html",
+        "iaae-2024-10-amit.html",
+        "iaae-2024-11-nivedita.html",
+        "iaae-2024-01-nitin.html",
+        "iaae-2024-12-anand.html",
+        "iaae-2024-13-tarun.html",
+        "cul-export-award-function.html",
+        "cul-feel-india.html",
+        "cul-brics-international-conference.html",
+        "cul-ministry-textiles-international-conference.html",
+        "cul-conference-south-asian-ministers.html",
+        "cul-cvc-conference.html",
+        "cul-capam-conference.html",
+        "print-media-2011.html",
+        "print-media-2012.html",
+        "print-media-2013.html",
+        "print-media-2014.html",
+        "print-media-2018.html"
+      ]
+    ],
+    [
+      "https://twitter.com/raysofwisdom1",
+      [
+        "index.htm",
+        "about-rays-of-wisdom-society.html",
+        "members.html",
+        "partners.html",
+        "productions.html",
+        "prdn-vedas-eko-hum-bahu-syam.html",
+        "prdn-antar-yatra.html",
+        "prdn-sanskrit-healing-language.html",
+        "prdn-ramleela-in-opera.html",
+        "prdn-rabindra-abhivyakti.html",
+        "iaaf.html",
+        "iaac-2024.html",
+        "iaae-2024.html",
+        "iaaf-2024.html",
+        "rws-7th-iaaf.html",
+        "iaaf-2018.html",
+        "iaaf-2014.html",
+        "iaaf-2013.html",
+        "iaaf-2012.html",
+        "iaaf-2011.html",
+        "iaaf-2010.html",
+        "cultural-event-management.html",
+        "yoga.html",
+        "rws-videos.html",
+        "print-media.html",
+        "donate.html",
+        "contact.html",
+        "iaae-2024-02-sangeeta.html",
+        "iaae-2024-03-aashima.html",
+        "iaae-2024-04-nidhi.html",
+        "iaae-2024-05-abhay.html",
+        "iaae-2024-06-zuzana.html",
+        "iaae-2024-07-ragini.html",
+        "iaae-2024-08-indu.html",
+        "iaae-2024-09-laxman.html",
+        "iaae-2024-10-amit.html",
+        "iaae-2024-11-nivedita.html",
+        "iaae-2024-01-nitin.html",
+        "iaae-2024-12-anand.html",
+        "iaae-2024-13-tarun.html",
+        "cul-export-award-function.html",
+        "cul-feel-india.html",
+        "cul-brics-international-conference.html",
+        "cul-ministry-textiles-international-conference.html",
+        "cul-conference-south-asian-ministers.html",
+        "cul-cvc-conference.html",
+        "cul-capam-conference.html",
+        "print-media-2011.html",
+        "print-media-2012.html",
+        "print-media-2013.html",
+        "print-media-2014.html",
+        "print-media-2018.html"
+      ]
+    ],
+    [
+      "https://in.linkedin.com/in/rays-of-wisdom-307332136",
+      [
+        "index.htm",
+        "about-rays-of-wisdom-society.html",
+        "members.html",
+        "partners.html",
+        "productions.html",
+        "prdn-vedas-eko-hum-bahu-syam.html",
+        "prdn-antar-yatra.html",
+        "prdn-sanskrit-healing-language.html",
+        "prdn-ramleela-in-opera.html",
+        "prdn-rabindra-abhivyakti.html",
+        "iaaf.html",
+        "iaac-2024.html",
+        "iaae-2024.html",
+        "iaaf-2024.html",
+        "rws-7th-iaaf.html",
+        "iaaf-2018.html",
+        "iaaf-2014.html",
+        "iaaf-2013.html",
+        "iaaf-2012.html",
+        "iaaf-2011.html",
+        "iaaf-2010.html",
+        "cultural-event-management.html",
+        "yoga.html",
+        "rws-videos.html",
+        "print-media.html",
+        "donate.html",
+        "contact.html",
+        "iaae-2024-02-sangeeta.html",
+        "iaae-2024-03-aashima.html",
+        "iaae-2024-04-nidhi.html",
+        "iaae-2024-05-abhay.html",
+        "iaae-2024-06-zuzana.html",
+        "iaae-2024-07-ragini.html",
+        "iaae-2024-08-indu.html",
+        "iaae-2024-09-laxman.html",
+        "iaae-2024-10-amit.html",
+        "iaae-2024-11-nivedita.html",
+        "iaae-2024-01-nitin.html",
+        "iaae-2024-12-anand.html",
+        "iaae-2024-13-tarun.html",
+        "cul-export-award-function.html",
+        "cul-feel-india.html",
+        "cul-brics-international-conference.html",
+        "cul-ministry-textiles-international-conference.html",
+        "cul-conference-south-asian-ministers.html",
+        "cul-cvc-conference.html",
+        "cul-capam-conference.html",
+        "print-media-2011.html",
+        "print-media-2012.html",
+        "print-media-2013.html",
+        "print-media-2014.html",
+        "print-media-2018.html"
+      ]
+    ],
+    [
+      "https://sudhirjagtap.com/",
+      [
+        "index.htm",
+        "about-rays-of-wisdom-society.html",
+        "members.html",
+        "partners.html",
+        "productions.html",
+        "prdn-vedas-eko-hum-bahu-syam.html",
+        "prdn-antar-yatra.html",
+        "prdn-sanskrit-healing-language.html",
+        "prdn-ramleela-in-opera.html",
+        "prdn-rabindra-abhivyakti.html",
+        "iaaf.html",
+        "iaac-2024.html",
+        "iaae-2024.html",
+        "iaaf-2024.html",
+        "rws-7th-iaaf.html",
+        "iaaf-2018.html",
+        "iaaf-2014.html",
+        "iaaf-2013.html",
+        "iaaf-2012.html",
+        "iaaf-2011.html",
+        "iaaf-2010.html",
+        "cultural-event-management.html",
+        "yoga.html",
+        "rws-videos.html",
+        "print-media.html",
+        "donate.html",
+        "contact.html",
+        "iaae-2024-02-sangeeta.html",
+        "iaae-2024-03-aashima.html",
+        "iaae-2024-04-nidhi.html",
+        "iaae-2024-05-abhay.html",
+        "iaae-2024-06-zuzana.html",
+        "iaae-2024-07-ragini.html",
+        "iaae-2024-08-indu.html",
+        "iaae-2024-09-laxman.html",
+        "iaae-2024-10-amit.html",
+        "iaae-2024-11-nivedita.html",
+        "iaae-2024-01-nitin.html",
+        "iaae-2024-12-anand.html",
+        "iaae-2024-13-tarun.html",
+        "cul-export-award-function.html",
+        "cul-feel-india.html",
+        "cul-brics-international-conference.html",
+        "cul-ministry-textiles-international-conference.html",
+        "cul-conference-south-asian-ministers.html",
+        "cul-cvc-conference.html",
+        "cul-capam-conference.html",
+        "print-media-2013.html",
+        "print-media-2014.html",
+        "print-media-2018.html"
+      ]
+    ],
+    [
+      "https://ignca.gov.in/",
+      [
+        "iaaf-2024.html"
+      ]
+    ],
+    [
+      "http://shriramcentre.org",
+      [
+        "rws-7th-iaaf.html"
+      ]
+    ],
+    [
+      "http://www.ebiz-eximius.com/",
+      [
+        "rws-7th-iaaf.html"
+      ]
+    ],
+    [
+      "http://www.biharyoga.net/bihar-school-of-yoga/about-bsy/",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "http://www.bijoylaxmihota.com/",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "https://en.wikipedia.org/wiki/Satyananda_Saraswati",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "http://www.amazon.in/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=bijoylaxmi+hota&rh=i%3Aaps%2Ck%3Abijoylaxmi+hota",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "http://www.amazon.in/Yoga-Busy-People-Bijoylaxmi-Hota/dp/8171678386/ref=sr_1_1?ie=UTF8&qid=1484395989&sr=8-1&keywords=Yoga+for+Busy+People%E2%80%99",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "http://www.amazon.in/Books-Bijoylaxmi-Hota/s?ie=UTF8&page=1&rh=n%3A976389031%2Cp_27%3ABijoylaxmi%20Hota",
+      [
+        "yoga.html"
+      ]
+    ],
+    [
+      "https://www.capam.org",
+      [
+        "cul-capam-conference.html"
+      ]
+    ],
+    [
+      "https://sudhirjagtap.com",
+      [
+        "print-media-2012.html"
+      ]
+    ]
+  ]
+}
