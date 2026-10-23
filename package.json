@@ -1,0 +1,40 @@
+{
+  "name": "rays-of-wisdom-society-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website of Rays of Wisdom Society, New Delhi",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck",
+    "images": "node scripts/build-images.mjs",
+    "backgrounds": "node scripts/build-backgrounds.mjs",
+    "icons": "node scripts/build-icons.mjs",
+    "fetch:originals": "node scripts/fetch-originals.mjs",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "cobe": "^2.0.1",
+    "framer-motion": "^12.38.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
