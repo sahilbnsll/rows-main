@@ -14,14 +14,18 @@ export interface Strand {
 /**
  * The Society's strands of work as a deck of cards, after "scroll cards" in the component library: each card holds still near the
  * top of the screen while the next one slides up over it, so the deck builds as you read. Pure CSS (position: sticky), nothing
- * runs per frame; each card sits a little lower than the last, so the edges of the ones beneath stay in view.
+ * runs per frame; each card sits a little lower than the last, so the edges of the ones beneath stay in view. Every card is the
+ * same height (the tallest one's, set through --strand-h by StrandsWithIndex) so each lands exactly over the one before it, and
+ * the stack is held in place for a while after the last card lands.
  */
-export function StackedStrands({ strands }: { strands: Strand[] }) {
+export function StackedStrands({ strands, marks = false }: { strands: Strand[]; marks?: boolean }) {
   return (
     <ol className="relative">
-      {strands.map((s, i) => (
-        <li key={s.title} className="sticky pb-6" style={{ top: `calc(var(--header-h) + 1.5rem + ${i * 1.1}rem)` }}>
-          <article className="relative isolate grid min-h-[24rem] overflow-hidden rounded-[1.5rem] text-paper shadow-e3 md:min-h-[26rem] md:grid-cols-[1.05fr_0.95fr]">
+      {strands.flatMap((s, i) => [
+        // an invisible marker at the card's natural place, which stays put while the card is pinned (used by the index)
+        ...(marks ? [<li key={`m${s.title}`} aria-hidden="true" data-strand-mark className="pointer-events-none h-0 list-none" />] : []),
+        <li key={s.title} data-strand-card className="sticky pb-6" style={{ top: `calc(var(--header-h) + 1.5rem + ${i * 1.1}rem)` }}>
+          <article className="relative isolate grid min-h-[max(24rem,var(--strand-h,0px))] overflow-hidden rounded-[1.5rem] text-paper shadow-e3 ring-1 ring-gold/30 md:grid-cols-[1.05fr_0.95fr]">
             <div className="relative min-h-[13rem] md:order-2">
               <Image src={s.photo.src} alt={s.photo.alt} fill sizes="(min-width:768px) 36rem, 92vw" quality={80} className="object-cover" style={{ objectPosition: s.photo.position ?? "50% 35%" }} />
             </div>
@@ -37,8 +41,11 @@ export function StackedStrands({ strands }: { strands: Strand[] }) {
               </Link>
             </div>
           </article>
-        </li>
-      ))}
+        </li>,
+      ])}
+      {/* a hold at the end: the pinned cards stay put for this much more scrolling, so the last card finishes sliding over the one
+          before it and the finished stack is seen before the page moves on (the cards let go only when this has scrolled past) */}
+      <li aria-hidden="true" className="pointer-events-none h-[45svh] min-h-[14rem] list-none" />
     </ol>
   );
 }

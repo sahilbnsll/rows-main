@@ -63,7 +63,8 @@ export default function FestivalPage() {
                 year: 2026,
                 label: "9th edition · coming up",
                 theme: "Ancient Arts. Universal Consciousness. A World Beyond Boundaries.",
-                meta: "25 and 26 November 2026 · Kamani Auditorium, New Delhi",
+                dates: "25 and 26 November 2026",
+                venue: "Kamani Auditorium, New Delhi",
                 href: "/festival/2026",
                 poster: brand.collage,
                 highlight: true,
@@ -72,10 +73,11 @@ export default function FestivalPage() {
                 year: e.year,
                 label: e.ordinal ? `${e.ordinal} edition` : "Edition",
                 theme: e.theme,
-                meta: [e.dates, e.venue].filter(Boolean).join(" · "),
+                dates: e.dates,
+                venue: e.venue,
                 blurb: e.blurb,
                 href: `/festival/${e.slug}`,
-                poster: e.poster,
+                poster: e.poster ?? e.extras?.[0],
               })),
             ]}
           />

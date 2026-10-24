@@ -3,7 +3,7 @@ import { curator } from "@/content/festival-2026";
 import { editions, festivalMoments } from "@/content/festival";
 import { productionBySlug } from "@/content/productions";
 import { yoga } from "@/content/yoga";
-import { StackedStrands } from "@/components/sections/StackedStrands";
+import { StrandsWithIndex } from "@/components/sections/StrandsWithIndex";
 import { aboutNav, org } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 import { PageHero } from "@/components/layout/PageHero";
@@ -11,7 +11,6 @@ import { Frame } from "@/components/ui/Frame";
 import { ArrowRight } from "@/components/ui/Icons";
 import { Quote } from "@/components/ui/Quote";
 import { Reveal } from "@/components/ui/Reveal";
-import { Seal } from "@/components/ui/Seal";
 import { SubNav } from "@/components/ui/SubNav";
 import { pageMetadata } from "@/lib/seo";
 
@@ -63,21 +62,8 @@ export default function AboutPage() {
       />
 
       <section aria-labelledby="work-title" className="section-tight">
-        <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
-          <Reveal>
-            <h2 id="work-title" className="section-title max-w-[12ch]">
-              What the Society does
-            </h2>
-            <div className="mt-8 flex items-center gap-5">
-              <Seal className="w-24 shrink-0 text-olive" />
-              <p className="meta max-w-[14rem]">
-                {org.registration}
-                <br />
-                Recognised by the Ministry of Culture, Government of India, as an Outstanding Category Organization.
-              </p>
-            </div>
-          </Reveal>
-          <StackedStrands strands={strands} />
+        <div className="wrap">
+          <StrandsWithIndex strands={strands} registration={org.registration} recognition="Recognised by the Ministry of Culture, Government of India, as an Outstanding Category Organization." />
         </div>
       </section>
 

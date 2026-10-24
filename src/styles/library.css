@@ -199,3 +199,8 @@
     transition: none;
   }
 }
+
+/* the timeline's glowing tip shows only while the gold line is passing through that entry */
+[data-tl-rail][data-active] .tl-tip {
+  opacity: 1;
+}

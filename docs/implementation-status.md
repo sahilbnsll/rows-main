@@ -84,12 +84,12 @@ Every component in `Ui-components.md` was read in full and adapted to the Paper 
 | pull-lamp | Footer desk lamp (`PullLamp`): lighting it switches the whole site to a warm night palette (`html[data-lamp="on"]`); phone menu has `LampSwitch`. MIT credit to Ship Notes in the file |
 | morph-gallery (WebGL noise dissolve) | `/productions` hero (`MorphHero`) |
 | gallery-4 (black and white, colour on hover) | `/productions` "From the stage" (`PhotoGrid mono`) |
-| timeline-01 | `/festival` "Every edition" (`EditionsTimeline`) |
+| timeline-01 | `/festival` "Every edition" (`EditionsTimeline`): one unbroken line that fills with gold as you scroll, a glowing tip, nodes that light up as it reaches them, ending at the last dot; dates and venue as chips; every poster shown whole |
 | cobe-globe-polaroids | `/festival` "Artists from across the world" (`CountriesGlobe`, data in `festival-countries.ts`, each country tied to the edition text that names it) |
 | polaroid-line-carousel | `/festival` "Moments from the festival" (`PolaroidLine`) |
-| focus-cards + card-7 | `/events` (`EventCards`) |
-| scroll-cards | `/about` strands (`StackedStrands`) |
-| gallery (PhotoGallery spread) | `/yoga` photographs (`PhotoSpread`) |
+| focus-cards + card-7 | `/events` (`EventCards`) and `/yoga` photographs (`FocusGallery`) |
+| scroll-cards | `/about` strands (`StackedStrands`, `StrandsWithIndex`): equal-height pinned cards; the left column stays in view with a numbered index that follows the card on top |
+| gallery (PhotoGallery spread) | Tried on `/yoga` and replaced at the client's request by focus cards (`FocusGallery`: rows where each picture keeps its own shape, none cropped) |
 | book | `/yoga` books (`Book`, real Amazon covers) |
 | works-wheel | `/festival/2024/exhibition` (`WorksWheel`) |
 | card-25 | `/festival/2024` strands (`StrandCard`) |

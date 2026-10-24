@@ -4,7 +4,7 @@ import { videoById } from "@/content/videos";
 import { PageHero } from "@/components/layout/PageHero";
 import { Frame } from "@/components/ui/Frame";
 import { ArrowRight, ArrowUpRight } from "@/components/ui/Icons";
-import { PhotoSpread } from "@/components/ui/PhotoSpread";
+import { FocusGallery } from "@/components/ui/FocusGallery";
 import { Book } from "@/components/ui/Book";
 import { Quote } from "@/components/ui/Quote";
 import { Reveal } from "@/components/ui/Reveal";
@@ -51,7 +51,7 @@ export default function YogaPage() {
             <p className="reading mt-5">{yoga.proposal.text}</p>
           </Reveal>
           <div className="mt-10">
-            <PhotoSpread photos={[...yoga.proposal.photos, ...yoga.camp.photos]} title="Yoga with Rays of Wisdom Society" />
+            <FocusGallery photos={[...yoga.proposal.photos, ...yoga.camp.photos]} title="Yoga with Rays of Wisdom Society" />
           </div>
         </div>
       </section>
