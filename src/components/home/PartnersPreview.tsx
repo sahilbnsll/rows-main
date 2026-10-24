@@ -6,7 +6,8 @@ import { Reveal } from "@/components/ui/Reveal";
 
 /** A first look at the partners; the full wall of 27 is on /partners. */
 export function PartnersPreview() {
-  const featured = partners.slice(0, 12);
+  // eleven logos and a "more" tile make twelve cells, which fills every row at 2, 3, 4 and 6 columns
+  const featured = partners.slice(0, 11);
   return (
     <section aria-labelledby="partners-title" className="section">
       <div className="wrap">
@@ -22,7 +23,7 @@ export function PartnersPreview() {
             <ArrowRight size={16} />
           </Link>
         </Reveal>
-        <LogoWall partners={featured} className="mt-10" />
+        <LogoWall partners={featured} className="mt-10" more={{ href: "/partners", label: `+${partners.length - featured.length}`, note: "more partners" }} />
       </div>
     </section>
   );
